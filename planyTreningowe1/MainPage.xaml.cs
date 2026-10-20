@@ -2,23 +2,29 @@
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
 
         public MainPage()
         {
             InitializeComponent();
+            Microsoft.Maui.Handlers.EntryHandler.Mapper.AppendToMapping("NoUnderline", (handler, view) =>
+            {
+            #if ANDROID
+                handler.PlatformView.Background = null;
+            #endif
+                });
+                
         }
 
-        private void OnCounterClicked(object? sender, EventArgs e)
+        private async void TapGestureRecognizer_Tapped(object sender, TappedEventArgs e)
         {
-            count++;
+            Console.WriteLine("kliknieto przejscie na rejestracje");
+            await Shell.Current.GoToAsync(nameof(RegisterView));
+        }
 
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
-
-            SemanticScreenReader.Announce(CounterBtn.Text);
+        private void loginButton_Clicked(object sender, EventArgs e)
+        {
+            Console.WriteLine("kliknietoi login");
         }
     }
+
 }
