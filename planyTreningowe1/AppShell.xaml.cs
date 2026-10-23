@@ -6,6 +6,7 @@
         {
             InitializeComponent();
             Routing.RegisterRoute(nameof(RegisterView), typeof(RegisterView));
+            Routing.RegisterRoute(nameof(LoginPage), typeof(LoginPage));
         }
     }
 }

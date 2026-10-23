@@ -11,7 +11,10 @@ namespace planyTreningowe1
 
         protected override Window CreateWindow(IActivationState? activationState)
         {
-            return new Window(new AppShell());
+            Window window = new(new AppShell());
+            window.Width = 550;
+            window.Height = 1000;
+            return window;
         }
     }
 }

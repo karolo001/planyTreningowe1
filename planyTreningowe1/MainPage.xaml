@@ -1,121 +1,141 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="planyTreningowe1.MainPage"
-             BackgroundColor="#1b1b1c"
-             >
-    <ScrollView>
+<ContentPage
+    x:Class="planyTreningowe1.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundColor="#1C1C1E"
+    Shell.NavBarIsVisible="False">
 
-        <Grid ColumnDefinitions="*" RowDefinitions="*,  8*" >
-            <Border
-                Background="#e3e4e6"
-                Margin="40, 0, 0, 0"
-                StrokeShape="RoundRectangle 0, 0, 100, 0">
-                <Label
-                    BackgroundColor="#e3e4e6"
-                    Grid.Row="0"
-                    Grid.Column="0"
-                    Text="Progress"
-                    FontSize="40"
-                    FontAttributes="Bold"
-                    TextColor="#111111"
-                    HorizontalOptions="Start"
-                    VerticalOptions="End"
-                    Padding="30, 0, 0, 0">
-                </Label>
-            </Border>
-            <Grid
-                BackgroundColor="#1b1b1c"
-                Grid.Column="0"
-                Grid.Row="1"
-                ColumnDefinitions="*"
-                RowDefinitions="2*, 10*">
-                <Label
-                    Text="Tracker"
-                    FontSize="30"
-                    Padding="20, 5, 0, 0"
-                    TextColor="White"
-                    Grid.Row="0"
-                    Grid.Column="0">
-                    
-                </Label>
-                <Border
-                    Margin="0, 0, 20, 0"
-                    Grid.Row="1"
-                    Grid.Column="0"
-                    BackgroundColor="#e3e4e6"
-                    Padding="30"
-                    StrokeShape="RoundRectangle 0, 100, 0, 0"
-                    >
-                    <VerticalStackLayout
-                        Spacing="20">
-                        <Label
-                            Text="Login"
-                            TextColor="Black"
-                            FontAttributes="Bold"
-                            FontSize="25"
-                            HorizontalOptions="Center">
-                        </Label>
-                        <Border
-                            Stroke="#CF000000" 
-                            StrokeThickness="1.5" 
-                            StrokeShape="RoundRectangle 8" 
-                            Padding="10,0" 
-                            Margin="0,10">
+    <Grid RowDefinitions="Auto,*,Auto" RowSpacing="0">
 
-                            <Entry
-                                x:Name="emailEntry"
-                                TextColor="Black"
-                                Placeholder="email"
-                                PlaceholderColor="#CF000000"
-                                BackgroundColor="Transparent" />
-                        </Border>
-                        <Border
-                            Stroke="#CF000000" 
-                            StrokeThickness="1.5" 
-                            StrokeShape="RoundRectangle 8" 
-                            Padding="10,0" 
-                            Margin="0,10">
+        <Border Grid.Row="0"
+                BackgroundColor="#E4E5E7"
+                StrokeThickness="0"
+                Padding="24,35,24,28">
 
-                            <Entry
-                                x:Name="passwordEntry"
-                                
-                                TextColor="Black"
-                                Placeholder="password"
-                                PlaceholderColor="#CF000000"
-                                BackgroundColor="Transparent" />
-                        </Border>
-                        <Label>
-                            <Label.FormattedText>
-                                <FormattedString>
-                                    <Span
-                                        Text="Don't have account? Click here!">
-                                        <Span.GestureRecognizers>
-                                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" ></TapGestureRecognizer>
-                                        </Span.GestureRecognizers>
-                                    </Span>
-                                </FormattedString>
-                            </Label.FormattedText>
-                        </Label>
-                        <Button
-                            Margin="0, 30, 0, 0"
-                            HorizontalOptions="Center"
-                            BackgroundColor="#1b1b1c"
-                            Text="LogIn"
-                            FontSize="20"
-                            Padding="30, 11, 30, 11"
-                            FontAttributes="Bold"
-                            CornerRadius="10"
-                            x:Name="loginButton"
-                            Clicked="loginButton_Clicked"
-                            >
-                            
-                        </Button>
-                    </VerticalStackLayout>
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="0,0,0,48"/>
+            </Border.StrokeShape>
+
+            <Grid ColumnDefinitions="*,Auto"
+                  VerticalOptions="Center">
+
+                <VerticalStackLayout Spacing="3">
+                    <Label Text="Progress"
+                           FontSize="34"
+                           TextColor="#1C1C1E"
+                           FontAttributes="Bold"/>
+
+                    <Label Text="Tracker"
+                           FontSize="19"
+                           TextColor="#55565A"/>
+                </VerticalStackLayout>
+
+                <Border Grid.Column="1"
+                        WidthRequest="48"
+                        HeightRequest="48"
+                        BackgroundColor="#1C1C1E"
+                        StrokeThickness="0"
+                        VerticalOptions="Center">
+
+                    <Border.StrokeShape>
+                        <Ellipse></Ellipse>
+                    </Border.StrokeShape>
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </Border.GestureRecognizers>
+
+                    <Label Text="👤"
+                           FontSize="23"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"/>
                 </Border>
-
             </Grid>
-        </Grid>
-    </ScrollView>
+        </Border>
+        <ScrollView Grid.Row="1" Margin="0, 20, 0, 0">
+            <VerticalStackLayout>
+                <Label Text="Your Weekly Progress"
+                       TextColor="White"
+                       FontSize="23"
+                       FontAttributes="Bold"
+                       HorizontalTextAlignment="Center"
+                       Margin="0,0,0,12"/>
+
+                <Border Stroke="#E4E5E7"
+                        StrokeShape="RoundRectangle 16"
+                        HeightRequest="200"
+                        WidthRequest="470"
+                        StrokeThickness="2"
+                        BackgroundColor="#E4E5E7">
+                    
+                    <Grid RowDefinitions="*,Auto" ColumnDefinitions="*,auto" Margin="20,10,20,10">
+                        <Label Text="Training Time"
+                               TextColor="#55565A"
+                               FontSize="20"
+                               Margin="0,0,0,0"
+                               Grid.Column="0"
+                               Grid.Row="0"/>
+                        <Label Text="0"
+                               Grid.Column="0"
+                               Grid.Row="0"
+                               x:Name="trainingTime"
+                               Margin="55,24,0,0"
+                               FontSize="25"
+                               TextColor="#55565A"
+                               FontAttributes="Bold"/>
+                        <Label
+                            Text="Total Volume"
+                            Grid.Column="1"
+                            Grid.Row="0"
+                            FontSize="20"
+                            TextColor="#55565A"
+                            Margin="0,0,0,0"/>
+                        <Label 
+                            Text="0"
+                            Grid.Column="1"
+                            Grid.Row="0"
+                            x:Name="totalVolume"
+                            Margin="55,24,0,0"
+                            FontSize="25"
+                            TextColor="#55565A"
+                            FontAttributes="Bold"/>
+                        <Label
+                            Text="Workouts"
+                            Grid.Column="0"
+                            Grid.Row="1"
+                            FontSize="20"
+                            TextColor="#55565A"
+                            Margin="20,0,0,50"/>
+                        <Label 
+                            Text="0"
+                            Grid.Column="0"
+                            Grid.Row="1"
+                            x:Name="totalWorkouts"
+                            Margin="55,24,0,0"
+                            FontSize="25"
+                            TextColor="#55565A"
+                            FontAttributes="Bold"/>
+                        <Label 
+                            Text="Total Sets"
+                            Grid.Column="1"
+                            Grid.Row="1"
+                            x:Name="totalVolume"
+                            Margin="15,0,0,0"
+                            FontSize="20"
+                            TextColor="#55565A"/>
+                        <Label 
+                            Text="0"
+                            Grid.Column="1"
+                            Grid.Row="1"
+                            x:Name="totalSets"
+                            Margin="55,24,0,00"
+                            FontSize="25"
+                            TextColor="#55565A"
+                            FontAttributes="Bold"/>
+                    </Grid>
+                </Border>
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
 
 </ContentPage>
