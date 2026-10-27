@@ -61,78 +61,262 @@
                        HorizontalTextAlignment="Center"
                        Margin="0,0,0,12"/>
 
-                <Border Stroke="#E4E5E7"
+                <Grid RowDefinitions="Auto,Auto" ColumnDefinitions="*,*" RowSpacing="12" ColumnSpacing="12" Margin="20,0">
+                    <Border Grid.Column="0"
+                            Grid.Row="0"
+                            Stroke="#E4E5E7"
+                            StrokeShape="RoundRectangle 16"
+                            HeightRequest="100"
+                            StrokeThickness="2"
+                            BackgroundColor="#E4E5E7">
+
+                        <Grid RowDefinitions="Auto,Auto" Margin="15,10,15,10">
+                            <Label Text="Training Time"
+                                   Grid.Row="0"
+                                   TextColor="#55565A"
+                                   FontSize="20"/>
+                            <Label Text="0"
+                                   Grid.Row="1"
+                                   x:Name="trainingTime"
+                                   Margin="0,5,0,0"
+                                   FontSize="25"
+                                   TextColor="#55565A"
+                                   FontAttributes="Bold"/>
+                        </Grid>
+                    </Border>
+                    <Border Grid.Column="1"
+                            Grid.Row="0"
+                            Stroke="#E4E5E7"
+                            StrokeShape="RoundRectangle 16"
+                            HeightRequest="100"
+                            StrokeThickness="2"
+                            BackgroundColor="#E4E5E7">
+
+                        <Grid RowDefinitions="Auto,Auto" Margin="15,10,15,10">
+                            <Label Text="Total Volume"
+                                   Grid.Row="0"
+                                   TextColor="#55565A"
+                                   FontSize="20"/>
+                            <Label Text="0"
+                                   Grid.Row="1"
+                                   x:Name="totalVolume"
+                                   Margin="0,5,0,0"
+                                   FontSize="25"
+                                   TextColor="#55565A"
+                                   FontAttributes="Bold"/>
+                        </Grid>
+                    </Border>
+                    <Border Grid.Column="0"
+                            Grid.Row="1"
+                            Stroke="#E4E5E7"
+                            StrokeShape="RoundRectangle 16"
+                            HeightRequest="100"
+                            StrokeThickness="2"
+                            BackgroundColor="#E4E5E7">
+
+                        <Grid RowDefinitions="Auto,Auto" Margin="15,10,15,10">
+                            <Label Text="Workouts"
+                                   Grid.Row="0"
+                                   TextColor="#55565A"
+                                   FontSize="20"/>
+                            <Label Text="0"
+                                   Grid.Row="1"
+                                   x:Name="totalWorkouts"
+                                   Margin="0,5,0,0"
+                                   FontSize="25"
+                                   TextColor="#55565A"
+                                   FontAttributes="Bold"/>
+                        </Grid>
+                    </Border>
+                    <Border Grid.Column="1"
+                            Grid.Row="1"
+                            Stroke="#E4E5E7"
+                            StrokeShape="RoundRectangle 16"
+                            HeightRequest="100"
+                            StrokeThickness="2"
+                            BackgroundColor="#E4E5E7">
+
+                        <Grid RowDefinitions="Auto,Auto" Margin="15,10,15,10">
+                            <Label Text="Total Sets"
+                                   Grid.Row="0"
+                                   TextColor="#55565A"
+                                   FontSize="20"/>
+                            <Label Text="0"
+                                   Grid.Row="1"
+                                   x:Name="totalSets"
+                                   Margin="0,5,0,0"
+                                   FontSize="25"
+                                   TextColor="#55565A"
+                                   FontAttributes="Bold"/>
+                        </Grid>
+                    </Border>
+                </Grid>
+
+                <Label Text="Plan treningowy"
+                       TextColor="White"
+                       FontSize="23"
+                       FontAttributes="Bold"
+                       HorizontalTextAlignment="Center"
+                       Margin="0,25,0,12"/>
+
+                <Grid ColumnDefinitions="*,*,*,*,*,*,*" ColumnSpacing="6" Margin="20,0">
+                    <Button Grid.Column="0"
+                            x:Name="mondayButton"
+                            ClassId="0"
+                            Text="Pn"
+                            Clicked="dayButton_Clicked"
+                            BackgroundColor="#E4E5E7"
+                            TextColor="#1C1C1E"
+                            FontSize="15"
+                            FontAttributes="Bold"
+                            Padding="0"
+                            CornerRadius="10"/>
+                    <Button Grid.Column="1"
+                            x:Name="tuesdayButton"
+                            ClassId="1"
+                            Text="Wt"
+                            Clicked="dayButton_Clicked"
+                            BackgroundColor="#2C2C2E"
+                            TextColor="White"
+                            FontSize="15"
+                            FontAttributes="Bold"
+                            Padding="0"
+                            CornerRadius="10"/>
+                    <Button Grid.Column="2"
+                            x:Name="wednesdayButton"
+                            ClassId="2"
+                            Text="Śr"
+                            Clicked="dayButton_Clicked"
+                            BackgroundColor="#2C2C2E"
+                            TextColor="White"
+                            FontSize="15"
+                            FontAttributes="Bold"
+                            Padding="0"
+                            CornerRadius="10"/>
+                    <Button Grid.Column="3"
+                            x:Name="thursdayButton"
+                            ClassId="3"
+                            Text="Cz"
+                            Clicked="dayButton_Clicked"
+                            BackgroundColor="#2C2C2E"
+                            TextColor="White"
+                            FontSize="15"
+                            FontAttributes="Bold"
+                            Padding="0"
+                            CornerRadius="10"/>
+                    <Button Grid.Column="4"
+                            x:Name="fridayButton"
+                            ClassId="4"
+                            Text="Pt"
+                            Clicked="dayButton_Clicked"
+                            BackgroundColor="#2C2C2E"
+                            TextColor="White"
+                            FontSize="15"
+                            FontAttributes="Bold"
+                            Padding="0"
+                            CornerRadius="10"/>
+                    <Button Grid.Column="5"
+                            x:Name="saturdayButton"
+                            ClassId="5"
+                            Text="So"
+                            Clicked="dayButton_Clicked"
+                            BackgroundColor="#2C2C2E"
+                            TextColor="White"
+                            FontSize="15"
+                            FontAttributes="Bold"
+                            Padding="0"
+                            CornerRadius="10"/>
+                    <Button Grid.Column="6"
+                            x:Name="sundayButton"
+                            ClassId="6"
+                            Text="Nd"
+                            Clicked="dayButton_Clicked"
+                            BackgroundColor="#2C2C2E"
+                            TextColor="White"
+                            FontSize="15"
+                            FontAttributes="Bold"
+                            Padding="0"
+                            CornerRadius="10"/>
+                </Grid>
+
+                <Label x:Name="dayLabel"
+                       Text="Poniedziałek"
+                       TextColor="White"
+                       FontSize="20"
+                       FontAttributes="Bold"
+                       Margin="20,15,20,10"/>
+
+                <Border BackgroundColor="#E4E5E7"
                         StrokeShape="RoundRectangle 16"
-                        HeightRequest="200"
-                        WidthRequest="470"
-                        StrokeThickness="2"
-                        BackgroundColor="#E4E5E7">
-                    
-                    <Grid RowDefinitions="*,Auto" ColumnDefinitions="*,auto" Margin="20,10,20,10">
-                        <Label Text="Training Time"
-                               TextColor="#55565A"
-                               FontSize="20"
-                               Margin="0,0,0,0"
-                               Grid.Column="0"
-                               Grid.Row="0"/>
-                        <Label Text="0"
-                               Grid.Column="0"
-                               Grid.Row="0"
-                               x:Name="trainingTime"
-                               Margin="55,24,0,0"
-                               FontSize="25"
-                               TextColor="#55565A"
-                               FontAttributes="Bold"/>
-                        <Label
-                            Text="Total Volume"
-                            Grid.Column="1"
-                            Grid.Row="0"
-                            FontSize="20"
-                            TextColor="#55565A"
-                            Margin="0,0,0,0"/>
-                        <Label 
-                            Text="0"
-                            Grid.Column="1"
-                            Grid.Row="0"
-                            x:Name="totalVolume"
-                            Margin="55,24,0,0"
-                            FontSize="25"
-                            TextColor="#55565A"
-                            FontAttributes="Bold"/>
-                        <Label
-                            Text="Workouts"
-                            Grid.Column="0"
-                            Grid.Row="1"
-                            FontSize="20"
-                            TextColor="#55565A"
-                            Margin="20,0,0,50"/>
-                        <Label 
-                            Text="0"
-                            Grid.Column="0"
-                            Grid.Row="1"
-                            x:Name="totalWorkouts"
-                            Margin="55,24,0,0"
-                            FontSize="25"
-                            TextColor="#55565A"
-                            FontAttributes="Bold"/>
-                        <Label 
-                            Text="Total Sets"
-                            Grid.Column="1"
-                            Grid.Row="1"
-                            x:Name="totalVolume"
-                            Margin="15,0,0,0"
-                            FontSize="20"
-                            TextColor="#55565A"/>
-                        <Label 
-                            Text="0"
-                            Grid.Column="1"
-                            Grid.Row="1"
-                            x:Name="totalSets"
-                            Margin="55,24,0,00"
-                            FontSize="25"
-                            TextColor="#55565A"
-                            FontAttributes="Bold"/>
-                    </Grid>
+                        StrokeThickness="0"
+                        Margin="20,0"
+                        Padding="20">
+
+                    <VerticalStackLayout Spacing="15">
+                        <Border Stroke="#CF000000"
+                                StrokeThickness="1.5"
+                                StrokeShape="RoundRectangle 8"
+                                Padding="10,0">
+
+                            <Entry x:Name="exerciseNameEntry"
+                                   TextColor="Black"
+                                   Placeholder="nazwa ćwiczenia"
+                                   PlaceholderColor="#CF000000"
+                                   BackgroundColor="Transparent" />
+                        </Border>
+
+                        <Grid ColumnDefinitions="*,*,*" ColumnSpacing="10">
+                            <Border Grid.Column="0"
+                                    Stroke="#CF000000"
+                                    StrokeThickness="1.5"
+                                    StrokeShape="RoundRectangle 8"
+                                    Padding="10,0">
+
+                                <Entry x:Name="setsEntry"
+                                       TextColor="Black"
+                                       Placeholder="serie"
+                                       PlaceholderColor="#CF000000"
+                                       Keyboard="Numeric"
+                                       BackgroundColor="Transparent" />
+                            </Border>
+                            <Border Grid.Column="1"
+                                    Stroke="#CF000000"
+                                    StrokeThickness="1.5"
+                                    StrokeShape="RoundRectangle 8"
+                                    Padding="10,0">
+
+                                <Entry x:Name="repsEntry"
+                                       TextColor="Black"
+                                       Placeholder="powt."
+                                       PlaceholderColor="#CF000000"
+                                       Keyboard="Numeric"
+                                       BackgroundColor="Transparent" />
+                            </Border>
+                            <Border Grid.Column="2"
+                                    Stroke="#CF000000"
+                                    StrokeThickness="1.5"
+                                    StrokeShape="RoundRectangle 8"
+                                    Padding="10,0">
+
+                                <Entry x:Name="weightEntry"
+                                       TextColor="Black"
+                                       Placeholder="kg"
+                                       PlaceholderColor="#CF000000"
+                                       Keyboard="Numeric"
+                                       BackgroundColor="Transparent" />
+                            </Border>
+                        </Grid>
+
+                        <Button HorizontalOptions="Center"
+                                BackgroundColor="#1b1b1c"
+                                Text="Dodaj cwiczenie"
+                                FontSize="20"
+                                Padding="30, 11, 30, 11"
+                                FontAttributes="Bold"
+                                CornerRadius="10"
+                                x:Name="addExerciseButton"
+                                Clicked="addExerciseButton_Clicked" />
+                    </VerticalStackLayout>
                 </Border>
             </VerticalStackLayout>
         </ScrollView>

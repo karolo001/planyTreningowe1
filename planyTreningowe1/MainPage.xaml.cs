@@ -1,11 +1,13 @@
-﻿namespace planyTreningowe1
+﻿using Microsoft.Maui.Controls.Shapes;
+
+namespace planyTreningowe1
 {
+
     public partial class MainPage : ContentPage
     {
-
         public MainPage()
         {
-            InitializeComponent();                      
+            InitializeComponent(); 
         }
 
 
@@ -13,6 +15,7 @@
         {
             await Shell.Current.GoToAsync(nameof(LoginPage));
         }
+
     }
 
 }
