@@ -152,95 +152,146 @@
                     </Border>
                 </Grid>
 
-                <Label Text="Plan treningowy"
+                <Label Text="Training Plan"
                        TextColor="White"
                        FontSize="23"
                        FontAttributes="Bold"
                        HorizontalTextAlignment="Center"
                        Margin="0,25,0,12"/>
 
-                <Grid ColumnDefinitions="*,*,*,*,*,*,*" ColumnSpacing="6" Margin="20,0">
-                    <Button Grid.Column="0"
-                            x:Name="mondayButton"
-                            ClassId="0"
-                            Text="Pn"
-                            Clicked="dayButton_Clicked"
-                            BackgroundColor="#E4E5E7"
-                            TextColor="#1C1C1E"
-                            FontSize="15"
-                            FontAttributes="Bold"
-                            Padding="0"
-                            CornerRadius="10"/>
-                    <Button Grid.Column="1"
-                            x:Name="tuesdayButton"
-                            ClassId="1"
-                            Text="Wt"
-                            Clicked="dayButton_Clicked"
-                            BackgroundColor="#2C2C2E"
-                            TextColor="White"
-                            FontSize="15"
-                            FontAttributes="Bold"
-                            Padding="0"
-                            CornerRadius="10"/>
-                    <Button Grid.Column="2"
-                            x:Name="wednesdayButton"
-                            ClassId="2"
-                            Text="Śr"
-                            Clicked="dayButton_Clicked"
-                            BackgroundColor="#2C2C2E"
-                            TextColor="White"
-                            FontSize="15"
-                            FontAttributes="Bold"
-                            Padding="0"
-                            CornerRadius="10"/>
-                    <Button Grid.Column="3"
-                            x:Name="thursdayButton"
-                            ClassId="3"
-                            Text="Cz"
-                            Clicked="dayButton_Clicked"
-                            BackgroundColor="#2C2C2E"
-                            TextColor="White"
-                            FontSize="15"
-                            FontAttributes="Bold"
-                            Padding="0"
-                            CornerRadius="10"/>
-                    <Button Grid.Column="4"
-                            x:Name="fridayButton"
-                            ClassId="4"
-                            Text="Pt"
-                            Clicked="dayButton_Clicked"
-                            BackgroundColor="#2C2C2E"
-                            TextColor="White"
-                            FontSize="15"
-                            FontAttributes="Bold"
-                            Padding="0"
-                            CornerRadius="10"/>
-                    <Button Grid.Column="5"
-                            x:Name="saturdayButton"
-                            ClassId="5"
-                            Text="So"
-                            Clicked="dayButton_Clicked"
-                            BackgroundColor="#2C2C2E"
-                            TextColor="White"
-                            FontSize="15"
-                            FontAttributes="Bold"
-                            Padding="0"
-                            CornerRadius="10"/>
-                    <Button Grid.Column="6"
-                            x:Name="sundayButton"
-                            ClassId="6"
-                            Text="Nd"
-                            Clicked="dayButton_Clicked"
-                            BackgroundColor="#2C2C2E"
-                            TextColor="White"
-                            FontSize="15"
-                            FontAttributes="Bold"
-                            Padding="0"
-                            CornerRadius="10"/>
-                </Grid>
+                <Border BackgroundColor="#2C2C2E"
+                        StrokeShape="RoundRectangle 16"
+                        StrokeThickness="0"
+                        Margin="20,0"
+                        Padding="12">
+
+                    <VerticalStackLayout Spacing="12">
+                        <Grid ColumnDefinitions="Auto,*,Auto">
+                            <Button Grid.Column="0"
+                                    Text="&lt;"
+                                    Clicked="previousWeekButton_Clicked"
+                                    BackgroundColor="#3A3A3C"
+                                    TextColor="White"
+                                    FontSize="18"
+                                    FontAttributes="Bold"
+                                    WidthRequest="36"
+                                    HeightRequest="36"
+                                    Padding="0"
+                                    CornerRadius="18"/>
+
+                            <Label Grid.Column="1"
+                                   x:Name="weekLabel"
+                                   Text="09.11 - 15.11.2026"
+                                   TextColor="White"
+                                   FontSize="16"
+                                   FontAttributes="Bold"
+                                   HorizontalTextAlignment="Center"
+                                   VerticalTextAlignment="Center"/>
+
+                            <Button Grid.Column="2"
+                                    Text="&gt;"
+                                    Clicked="nextWeekButton_Clicked"
+                                    BackgroundColor="#3A3A3C"
+                                    TextColor="White"
+                                    FontSize="18"
+                                    FontAttributes="Bold"
+                                    WidthRequest="36"
+                                    HeightRequest="36"
+                                    Padding="0"
+                                    CornerRadius="18"/>
+                        </Grid>
+
+                        <Grid ColumnDefinitions="*,*,*,*,*,*,*" ColumnSpacing="6">
+                            <Button Grid.Column="0"
+                                    x:Name="mondayButton"
+                                    ClassId="0"
+                                    Text="Mon"
+                                    Clicked="dayButton_Clicked"
+                                    BackgroundColor="#E4E5E7"
+                                    TextColor="#1C1C1E"
+                                    FontSize="15"
+                                    FontAttributes="Bold"
+                                    Padding="0"
+                                    HeightRequest="58"
+                                    CornerRadius="12"/>
+                            <Button Grid.Column="1"
+                                    x:Name="tuesdayButton"
+                                    ClassId="1"
+                                    Text="Tue"
+                                    Clicked="dayButton_Clicked"
+                                    BackgroundColor="Transparent"
+                                    TextColor="#AEAEB2"
+                                    FontSize="15"
+                                    FontAttributes="Bold"
+                                    Padding="0"
+                                    HeightRequest="58"
+                                    CornerRadius="12"/>
+                            <Button Grid.Column="2"
+                                    x:Name="wednesdayButton"
+                                    ClassId="2"
+                                    Text="Wed"
+                                    Clicked="dayButton_Clicked"
+                                    BackgroundColor="Transparent"
+                                    TextColor="#AEAEB2"
+                                    FontSize="15"
+                                    FontAttributes="Bold"
+                                    Padding="0"
+                                    HeightRequest="58"
+                                    CornerRadius="12"/>
+                            <Button Grid.Column="3"
+                                    x:Name="thursdayButton"
+                                    ClassId="3"
+                                    Text="Thu"
+                                    Clicked="dayButton_Clicked"
+                                    BackgroundColor="Transparent"
+                                    TextColor="#AEAEB2"
+                                    FontSize="15"
+                                    FontAttributes="Bold"
+                                    Padding="0"
+                                    HeightRequest="58"
+                                    CornerRadius="12"/>
+                            <Button Grid.Column="4"
+                                    x:Name="fridayButton"
+                                    ClassId="4"
+                                    Text="Fri"
+                                    Clicked="dayButton_Clicked"
+                                    BackgroundColor="Transparent"
+                                    TextColor="#AEAEB2"
+                                    FontSize="15"
+                                    FontAttributes="Bold"
+                                    Padding="0"
+                                    HeightRequest="58"
+                                    CornerRadius="12"/>
+                            <Button Grid.Column="5"
+                                    x:Name="saturdayButton"
+                                    ClassId="5"
+                                    Text="Sat"
+                                    Clicked="dayButton_Clicked"
+                                    BackgroundColor="Transparent"
+                                    TextColor="#AEAEB2"
+                                    FontSize="15"
+                                    FontAttributes="Bold"
+                                    Padding="0"
+                                    HeightRequest="58"
+                                    CornerRadius="12"/>
+                            <Button Grid.Column="6"
+                                    x:Name="sundayButton"
+                                    ClassId="6"
+                                    Text="Sun"
+                                    Clicked="dayButton_Clicked"
+                                    BackgroundColor="Transparent"
+                                    TextColor="#AEAEB2"
+                                    FontSize="15"
+                                    FontAttributes="Bold"
+                                    Padding="0"
+                                    HeightRequest="58"
+                                    CornerRadius="12"/>
+                        </Grid>
+                    </VerticalStackLayout>
+                </Border>
 
                 <Label x:Name="dayLabel"
-                       Text="Poniedziałek"
+                       Text="Monday, 09.11.2026"
                        TextColor="White"
                        FontSize="20"
                        FontAttributes="Bold"
@@ -260,7 +311,7 @@
 
                             <Entry x:Name="exerciseNameEntry"
                                    TextColor="Black"
-                                   Placeholder="nazwa ćwiczenia"
+                                   Placeholder="exercise name"
                                    PlaceholderColor="#CF000000"
                                    BackgroundColor="Transparent" />
                         </Border>
@@ -274,7 +325,7 @@
 
                                 <Entry x:Name="setsEntry"
                                        TextColor="Black"
-                                       Placeholder="serie"
+                                       Placeholder="sets"
                                        PlaceholderColor="#CF000000"
                                        Keyboard="Numeric"
                                        BackgroundColor="Transparent" />
@@ -287,7 +338,7 @@
 
                                 <Entry x:Name="repsEntry"
                                        TextColor="Black"
-                                       Placeholder="powt."
+                                       Placeholder="reps"
                                        PlaceholderColor="#CF000000"
                                        Keyboard="Numeric"
                                        BackgroundColor="Transparent" />
@@ -309,7 +360,7 @@
 
                         <Button HorizontalOptions="Center"
                                 BackgroundColor="#1b1b1c"
-                                Text="Dodaj cwiczenie"
+                                Text="Add Exercise"
                                 FontSize="20"
                                 Padding="30, 11, 30, 11"
                                 FontAttributes="Bold"
@@ -318,6 +369,68 @@
                                 Clicked="addExerciseButton_Clicked" />
                     </VerticalStackLayout>
                 </Border>
+
+                <Label Text="Exercises"
+                       TextColor="White"
+                       FontSize="20"
+                       FontAttributes="Bold"
+                       Margin="20,25,20,10"/>
+
+                <VerticalStackLayout x:Name="exercisesList"
+                                     Spacing="10"
+                                     Margin="20,0,20,30">
+
+                    <BindableLayout.EmptyView>
+                        <Label Text="No exercises for this day"
+                               TextColor="#AEAEB2"
+                               FontSize="16"
+                               HorizontalTextAlignment="Center"
+                               Margin="0,10"/>
+                    </BindableLayout.EmptyView>
+
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate>
+                            <Border BackgroundColor="#2C2C2E"
+                                    StrokeShape="RoundRectangle 16"
+                                    StrokeThickness="0"
+                                    Padding="15">
+
+                                <Grid ColumnDefinitions="*,Auto">
+                                    <VerticalStackLayout Grid.Column="0"
+                                                         Spacing="3">
+                                        <Label Text="{Binding Name}"
+                                               TextColor="White"
+                                               FontSize="18"
+                                               FontAttributes="Bold"/>
+                                        <Label TextColor="#AEAEB2"
+                                               FontSize="15">
+                                            <Label.FormattedText>
+                                                <FormattedString>
+                                                    <Span Text="{Binding Sets}"/>
+                                                    <Span Text=" sets × "/>
+                                                    <Span Text="{Binding Reps}"/>
+                                                    <Span Text=" reps"/>
+                                                </FormattedString>
+                                            </Label.FormattedText>
+                                        </Label>
+                                    </VerticalStackLayout>
+
+                                    <Border Grid.Column="1"
+                                            BackgroundColor="#E4E5E7"
+                                            StrokeShape="RoundRectangle 10"
+                                            StrokeThickness="0"
+                                            Padding="12,6"
+                                            VerticalOptions="Center">
+                                        <Label Text="{Binding Weight, StringFormat='{0} kg'}"
+                                               TextColor="#1C1C1E"
+                                               FontSize="16"
+                                               FontAttributes="Bold"/>
+                                    </Border>
+                                </Grid>
+                            </Border>
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                </VerticalStackLayout>
             </VerticalStackLayout>
         </ScrollView>
     </Grid>
