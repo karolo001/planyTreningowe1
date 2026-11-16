@@ -1,3 +1,6 @@
 <Solution>
-  <Project Path="planyTreningowe1/planyTreningowe1.csproj" />
+  <Project Path="../../planyTreningowe1/TrainingApi/TrainingApi.csproj" />
+  <Project Path="planyTreningowe1/planyTreningowe1.csproj">
+    <Deploy Solution="Debug|*" />
+  </Project>
 </Solution>
